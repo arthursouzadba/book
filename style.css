@@ -46,6 +46,9 @@ main {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     transition: transform 0.3s ease;
+    width: 90%; /* Aumenta a largura da caixa */
+    max-width: 1000px; /* Largura máxima */
+    margin: 0 auto 2rem; /* Centraliza as caixas */
 }
 
 .project:hover {
@@ -67,6 +70,7 @@ main {
     display: block;
     padding: 1rem;
     object-fit: contain;
+    max-height: 600px; /* Altura máxima para as imagens */
 }
 
 footer {
