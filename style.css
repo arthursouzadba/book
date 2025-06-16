@@ -70,7 +70,7 @@ main {
     display: block;
     padding: 1rem;
     object-fit: contain;
-    max-height: 600px; /* Altura máxima para as imagens */
+    max-height: 1200px; /* Altura máxima para as imagens */
 }
 
 footer {
