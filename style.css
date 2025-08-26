@@ -28,7 +28,7 @@ header p {
 }
 
 main {
-    max-width: 1200px;
+    max-width: 1400px; /* Aumentei a largura máxima para acomodar 4 colunas */
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -36,7 +36,7 @@ main {
 .projects {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 1.5rem; /* Reduzi um pouco o gap para melhor visualização em 4 colunas */
     margin-bottom: 3rem;
 }
 
@@ -46,16 +46,15 @@ main {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     transition: transform 0.3s ease;
-    width: 90%;
-    max-width: 1000px;
-    margin: 0 auto 2rem;
+    width: 100%;
+    margin: 0 auto;
     position: relative;
 }
 
 .project-image-container {
     position: relative;
     width: 100%;
-    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    padding-top: 75%; /* Mudei para 4:3 para melhor visualização dos dashboards */
     overflow: hidden;
 }
 
@@ -65,11 +64,12 @@ main {
 
 .project h2 {
     margin: 0;
-    padding: 1.5rem 1.5rem 1rem;
+    padding: 1rem;
     background: #f8f9fa;
     border-bottom: 1px solid #e9ecef;
-    font-size: 1.5rem;
+    font-size: 1.1rem; /* Reduzi um pouco o tamanho da fonte para caber melhor */
     color: #2c3e50;
+    text-align: center;
 }
 
 .project img {
@@ -78,7 +78,7 @@ main {
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover; /* Mudei de contain para cover para melhor preenchimento */
     padding: 0;
     cursor: pointer;
 }
@@ -112,15 +112,27 @@ footer {
 }
 
 /* Responsividade */
-@media (min-width: 768px) {
+@media (min-width: 600px) {
     .projects {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 900px) {
     .projects {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1200px) {
+    .projects {
+        grid-template-columns: repeat(4, 1fr); /* 4 colunas em telas grandes */
+        gap: 1.2rem; /* Gap um pouco menor para 4 colunas */
+    }
+    
+    .project h2 {
+        font-size: 1rem; /* Fonte um pouco menor para 4 colunas */
+        padding: 0.8rem;
     }
 }
 
